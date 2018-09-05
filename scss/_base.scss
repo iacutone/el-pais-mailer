@@ -1,0 +1,68 @@
+body {
+  font-family: $form-font;
+  font-color: $primary-text-color;
+  margin: 0;
+}
+
+section {
+  overflow: auto;
+}
+
+.site {
+  section {  
+    &.about {
+      padding-left: 1em;
+      background: $primary-color;
+      min-height: 50vh;
+      min-width: 100vw;
+      line-height: 2em;
+      border-bottom: 1px solid $accent-color;
+      display: flex-block;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & form {
+      .signup-form .btn:hover,
+      .signup-form .btn:focus {
+        box-shadow: inset 0px 0px 0px 2px $accent-color;
+      }
+
+      .signup-form {
+        align-items: center;
+        background: $primary-color-light;
+        display: flex;
+        justify-content: center;
+        min-height: 50vh;
+        min-width: 100vw;
+      }
+
+      .signup-form input[type=email] {
+        height: 42px;
+        border: 1px solid $accent-color;
+      }
+
+      .signup-form button {
+        height: 48px;
+      }
+
+      .signup-form input[type=email] {
+        min-width: 40ch;
+      }
+
+      .signup-form button {
+        font-size: 1rem;
+        margin-left: 8px;
+      }
+
+      .btn {
+        background: $primary-color-dark;
+        color: $primary-color-light;
+        font-weight: 200;
+        letter-spacing: 1px;
+        transition: 300ms;
+      }
+    }
+  }
+}
+
