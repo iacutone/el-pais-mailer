@@ -12,14 +12,14 @@ section {
   section {  
     &.about {
       padding-left: 1em;
-      background: $primary-color;
+      background-image: linear-gradient($primary-color, $primary-color-dark);
       min-height: 50vh;
       min-width: 100vw;
       line-height: 2em;
       border-bottom: 1px solid $accent-color;
-      display: flex-block;
       align-items: center;
       justify-content: center;
+      display: block;
     }
 
     & form {
@@ -29,12 +29,12 @@ section {
       }
 
       .signup-form {
+        justify-content: center;
         align-items: center;
         background: $primary-color-light;
-        display: flex;
-        justify-content: center;
         min-height: 50vh;
         min-width: 100vw;
+        display: grid;
       }
 
       .signup-form input[type=email] {
@@ -61,6 +61,19 @@ section {
         font-weight: 200;
         letter-spacing: 1px;
         transition: 300ms;
+      }
+    }
+  }
+}
+
+@include medium-media {
+  
+  .site {
+    section {  
+      & form {
+        .signup-form {
+          display: flex;
+        }
       }
     }
   }

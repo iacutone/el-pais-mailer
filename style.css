@@ -10,24 +10,24 @@ section {
 
 .site section.about {
   padding-left: 1em;
-  background: #9E9E9E;
+  background-image: linear-gradient(#9E9E9E, #616161);
   min-height: 50vh;
   min-width: 100vw;
   line-height: 2em;
   border-bottom: 1px solid #FF5252;
-  display: flex-block;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  display: block; }
 .site section form .signup-form .btn:hover,
 .site section form .signup-form .btn:focus {
   box-shadow: inset 0px 0px 0px 2px #FF5252; }
 .site section form .signup-form {
+  justify-content: center;
   align-items: center;
   background: #F5F5F5;
-  display: flex;
-  justify-content: center;
   min-height: 50vh;
-  min-width: 100vw; }
+  min-width: 100vw;
+  display: grid; }
 .site section form .signup-form input[type=email] {
   height: 42px;
   border: 1px solid #FF5252; }
@@ -44,5 +44,9 @@ section {
   font-weight: 200;
   letter-spacing: 1px;
   transition: 300ms; }
+
+@media (min-width: 600px) {
+  .site section form .signup-form {
+    display: flex; } }
 
 /*# sourceMappingURL=style.css.map */
