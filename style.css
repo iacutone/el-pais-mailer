@@ -6,8 +6,16 @@ body {
   margin: 0; }
 
 section {
-  overflow: auto; }
+  overflow: auto;
+  display: flex; }
 
+.site section.hero {
+  min-height: 25vh;
+  min-width: 100vw; }
+  .site section.hero h1 {
+    text-align: center;
+    color: #F5F5F5;
+    padding-left: 1em; }
 .site section.about {
   padding-left: 1em;
   background-image: linear-gradient(#9E9E9E, #616161);
@@ -46,6 +54,17 @@ section {
   transition: 300ms; }
 
 @media (min-width: 600px) {
+  .site section.hero {
+    background: url("photos/DSC01401.JPG") center center/cover;
+    background-attachment: fixed;
+    background-color: #616161;
+    min-height: 100vh;
+    min-width: 100vw; }
+    .site section.hero h1 {
+      font-weight: 500;
+      font-size: 3rem;
+      align-self: center;
+      padding-left: 1em; }
   .site section form .signup-form {
     display: flex; } }
 

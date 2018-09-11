@@ -6,10 +6,21 @@ body {
 
 section {
   overflow: auto;
+  display: flex;
 }
 
 .site {
   section {  
+    &.hero {
+      min-height: 25vh;
+      min-width: 100vw;
+      h1 {
+        text-align: center;
+        color: $primary-color-light;
+        padding-left: 1em;
+      }
+    }
+
     &.about {
       padding-left: 1em;
       background-image: linear-gradient($primary-color, $primary-color-dark);
@@ -70,6 +81,19 @@ section {
   
   .site {
     section {  
+      &.hero {
+        @include background-template('photos/DSC01401.JPG');
+        min-height: 100vh;
+        min-width: 100vw;
+
+        h1 {
+          font-weight: 500;
+          font-size: 3rem;
+          align-self: center;
+          padding-left: 1em;
+        }
+      }
+
       & form {
         .signup-form {
           display: flex;

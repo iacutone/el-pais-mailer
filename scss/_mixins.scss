@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin background-template($url) {
+  background: url($url) center center / cover;
+  background-attachment: fixed;
+  background-color: $primary-color-dark;
+}
