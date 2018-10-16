@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+cp style.css build/style.css
+cp index.html build/index.html
+cp -r photos/ build/photos
+
+s3cmd sync --recursive build/ s3://masterspanish.today
+echo -e "\t Successfully deployed to S3"
