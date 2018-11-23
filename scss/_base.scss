@@ -1,72 +1,74 @@
 body {
   font-family: $form-font;
-  font-color: $primary-text-color;
+  color: $primary-color-dark;
   margin: 0;
 }
 
 section {
   overflow: auto;
-  display: flex;
+  display: grid;
 }
 
-.site {
+#site {
   section {  
-    &.hero {
+    &#hero {
       min-height: 25vh;
       min-width: 100vw;
+      border-bottom: 1px solid $divider-color;
       h1 {
-        text-align: center;
-        color: $primary-color-light;
         padding-left: 1em;
       }
     }
 
-    &.about {
+    &#about {
+      grid-template-rows: 30px 1fr;
       padding-left: 1em;
-      background-image: linear-gradient($primary-color, $primary-color-dark);
-      min-height: 50vh;
+      background-image: linear-gradient($primary-color, $primary-color-light);
+      min-height: 25vh;
       min-width: 100vw;
       line-height: 2em;
       border-bottom: 1px solid $divider-color;
       align-items: center;
       justify-content: center;
-      display: block;
+      padding-top: 10px;
     }
 
-    & form {
-      .signup-form .btn:hover,
-      .signup-form .btn:focus {
+    &#signup-form {
+      grid-template-rows: 30px 1fr;
+      justify-content: center;
+      align-items: center;
+      background: $primary-color-light;
+      min-height: 25vh;
+      min-width: 100vw;
+      display: grid;
+      grid-template-rows: auto;
+
+      .btn:hover,
+      .btn:focus {
         box-shadow: inset 0px 0px 0px 2px $accent-color;
       }
 
-      .signup-form {
-        justify-content: center;
-        align-items: center;
-        background: $primary-color-light;
-        min-height: 50vh;
-        min-width: 100vw;
-        display: grid;
+      #preview-link {
+        color: $primary-color-dark;
       }
 
-      .signup-form input[type=email] {
+      input[type=email] {
         height: 42px;
         border: 1px solid $accent-color;
-      }
-
-      .signup-form button {
-        height: 48px;
-      }
-
-      .signup-form input[type=email] {
         min-width: 40ch;
       }
 
-      .signup-form button {
+      button {
+        height: 48px;
         font-size: 1rem;
         margin-left: 8px;
       }
 
-      .btn {
+      button:hover {
+        text-decoration: none;
+      }
+
+      #btn {
         background: $primary-color-dark;
         color: $primary-color-light;
         font-weight: 200;
@@ -79,24 +81,19 @@ section {
 
 @include medium-media {
   
-  .site {
+  #site {
     section {  
-      &.hero {
+      &#hero {
         @include background-template('photos/DSC01401.JPG');
         min-height: 100vh;
         min-width: 100vw;
 
         h1 {
+          color: $primary-color-light;
           font-weight: 500;
           font-size: 3rem;
           align-self: center;
           padding-left: 1em;
-        }
-      }
-
-      & form {
-        .signup-form {
-          display: flex;
         }
       }
     }

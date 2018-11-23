@@ -17,9 +17,9 @@
   </head>
 
   <body>
-    <div class="site">
-      <section class="hero"><h1>Learn Spanish, Today</h1></section>
-      <section class="about">
+    <div id="site">
+      <section id="hero"><h1>Learn Spanish, Today</h1></section>
+      <section id="about">
         <p>Reading is a good way to learn a foreign language</p>
         <p>However, it is difficult to routinely read</p>
         <p>Master Spanish sends an email of an El Pais newspaper article everyday</p>
@@ -27,13 +27,17 @@
         <p>Articles are presented in both English and Spanish</p>
       </section>
 
-      <section class="form">
+      <section id="signup-form">
+        <div id="preview">
+          <div>Start receiving the email.</div><br>
+          <a href='preview.text', id="preview-link">(preview)</a>
+        </div>
         <div id="mc_embed_signup">
           <form action="https://amazonaws.us13.list-manage.com/subscribe/post?u=93b41a1871734324d088abc68&amp;id=208637560c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
-              <div class="mc-field-group signup-form">
+              <div class="mc-field-group" id='signup-form'>
                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email">
-                <button class="btn">Subscribe</button>
+                <button id="btn">Subscribe</button>
               </div>
               <div id="mce-responses" class="clear">
                 <div class="response" id="mce-error-response" style="display:none"></div>

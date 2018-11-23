@@ -4,6 +4,7 @@ set -e
 cp style.css build/style.css
 cp index.html build/index.html
 cp -r photos/ build/photos
+cp preview.text build/preview.text
 
 s3cmd sync --recursive build/ s3://masterspanish.today
 echo -e "\t Successfully deployed to S3"
