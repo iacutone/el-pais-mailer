@@ -1,3 +1,9 @@
+@mixin small-media() {
+  @media (min-width: 400px) {
+    @content;
+  }
+}
+
 @mixin medium-media() {
   @media (min-width: 600px) {
     @content;
@@ -11,7 +17,8 @@
 }
 
 @mixin background-template($url) {
-  background: url($url) center center / cover;
-  background-attachment: fixed;
-  background-color: $primary-color-dark;
+  background-image: 
+    url($url); 
+  background-size: cover;
+  filter: opacity(65%);
 }

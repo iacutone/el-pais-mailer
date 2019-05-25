@@ -15,29 +15,18 @@ section {
       min-height: 25vh;
       min-width: 100vw;
       border-bottom: 1px solid $divider-color;
-      h1 {
-        padding-left: 1em;
-      }
     }
 
-    &#about {
-      grid-template-rows: 30px 1fr;
-      padding-left: 1em;
-      background-image: linear-gradient($primary-color, $primary-color-light);
-      min-height: 25vh;
-      min-width: 100vw;
-      line-height: 2em;
-      border-bottom: 1px solid $divider-color;
-      align-items: center;
-      justify-content: center;
-      padding-top: 10px;
+    #signup-wrapper {
+      background: $primary-color-light;
+      padding: 20px;
     }
 
     &#signup-form {
       grid-template-rows: 30px 1fr;
       justify-content: center;
       align-items: center;
-      background: $primary-color-light;
+      background: $primary-color-dark;
       min-height: 25vh;
       min-width: 100vw;
       display: grid;
@@ -54,26 +43,40 @@ section {
 
       input[type=email] {
         height: 42px;
-        border: 1px solid $accent-color;
         min-width: 40ch;
+        box-shadow: inset 0 2px 2px $primary-color-light;
       }
 
       button {
         height: 48px;
         font-size: 1rem;
         margin-left: 8px;
-      }
-
-      button:hover {
-        text-decoration: none;
+        padding: 15px 20px;
+        box-shadow: 0 1px 3px $primary-color-dark;
       }
 
       #btn {
         background: $primary-color-dark;
         color: $primary-color-light;
-        font-weight: 200;
+        font-weight: 500;
         letter-spacing: 1px;
         transition: 300ms;
+      }
+
+      #btn:hover {
+        background: $primary-color;
+      }
+    }
+  }
+}
+
+@include small-media {
+  #site {
+    section {  
+      #signup-wrapper {
+        margin: 0;
+        left: 0;
+        position: relative;
       }
     }
   }
@@ -90,11 +93,31 @@ section {
 
         h1 {
           color: $primary-color-light;
+	  text-shadow: 0 0 50px hsla(0, 0%, 0%, .4);
           font-weight: 500;
           font-size: 3rem;
           align-self: center;
           padding-left: 1em;
         }
+      }
+
+
+      #signup-wrapper {
+        left: 10%;
+        margin-top: -13%;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@include large-media {
+  #site {
+    section {  
+      #signup-wrapper {
+        margin-top: -13%;
+        left: 35%;
+        position: absolute;
       }
     }
   }
